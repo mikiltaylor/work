@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Simplified Procedure Lookup
+  version: 1.0.0
+  contact: {}
+servers:
+- url: https://api.airtable.com
+paths:
+  /v0/appbwEw7nTI2mlYX7/tblqq9yruxO0lVUjt:
+    get:
+      summary: Search Simplified Procedure codes mapping
+      description: This searches Procedure codes that map to Simplified Procedures, and returns the Procedure Code record ID
+      parameters:
+      - name: filterByFormula
+        in: query
+        schema:
+          type: string
+          example: SEARCH("45380",{Procedure Code})
+      responses:
+        '200':
+          description: ''
+      security:
+      - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags: []
