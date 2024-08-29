@@ -9,14 +9,14 @@ paths:
   /v0/appbwEw7nTI2mlYX7/tbltaID3bWjUs3EOa:
     get:
       summary: Search Procedure Code Prices
-      description: This searches for pricing for a procdeure by the procedure code using the filterByFormula parameter. In the example "CH477" is to be substituted for the procedure code the user is searching for.
+      description: This searches for pricing for a procdeure by the procedure code using the filterByFormula parameter. In the example "45380" is to be substituted for the procedure code the user is searching for, "Professional" is to be substituted for the entity type the user is searching for, and "Hospital Outpatient" is to be substituted for the place of service the user is searching for.
       operationId: searchProcedureCodePrices
       parameters:
       - name: filterByFormula
         in: query
         schema:
           type: string
-          example: SEARCH("CH477",{Procedure Code})
+          example: AND({Procedure Code} = "45380",{Entity Type} = "Professional",{Place of Service} = "Hospital Outpatient")
       responses:
         '200':
           description: ''
