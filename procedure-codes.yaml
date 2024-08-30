@@ -9,13 +9,13 @@ paths:
   /v0/appbwEw7nTI2mlYX7/tbl6Krx4apSwhVvyF:
     get:
       summary: Search Procedure codes
-      description: This searches for valid Procedure Code record IDs
+      description: This searches for procedure descriptions
       parameters:
       - name: filterByFormula
         in: query
         schema:
           type: string
-          example: SEARCH("45380",{Procedure Code})
+          example: SEARCH("Colonoscopy",{Procedure Code Full Description})
       responses:
         '200':
           description: ''
