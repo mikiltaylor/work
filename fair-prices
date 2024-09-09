@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Procedure codes
+  version: 1.0.0
+  contact: {}
+servers:
+- url: https://api.airtable.com
+paths:
+  /v0/appbwEw7nTI2mlYX7/tbleOIyk0H8YJNRyT:
+    get:
+      summary: Search fair prices
+      description: This searches for fair prices
+      parameters:
+      - name: filterByFormula
+        in: query
+        schema:
+          type: string
+          example: SEARCH("45380",{Procedure Code})
+      responses:
+        '200':
+          description: ''
+      security:
+      - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags: []
